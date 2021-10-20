@@ -1,0 +1,41 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#scatter_plot, 
+#choropleth_map,
+#kgco2_chart {
+    width: 100%;
+}
+
+.header {
+    background-color: cadetblue;
+    padding: .8rem 1rem;
+}
+
+.header .title {
+    color: #fff;
+}
+
+.charts {
+    padding: 1rem;
+}
+
+.charts .chart-item:not(:first-child) {
+    margin-top: 1rem;
+}
+
+.charts .chart-item .description {
+    background-color: cadetblue;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.3vw;
+    margin: 1rem auto;
+}
+

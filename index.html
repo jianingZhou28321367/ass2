@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+    <!-- Import vega-embed -->
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="title">
+            <h1 style="align-text:center;">The visualization of the CO2 gas emission of the global</h3>
+        </div>
+    </header>
+    <div class="charts">
+        <div class="chart-item">
+            <div id="choropleth_map"></div>
+            <div class="description">
+                The map above is used to show the distribution of the GHG-emission in the global. In this map, the
+                depth of the map's color represents the amount of the GHG emissions, The darker the color, the more
+                carbon dioxide emissions, and vice versa. In order to let us grasp more detail information about a
+                specified country, the map would pop a window to show the amount of the GHG emission of the current
+                country. From the map above, we could find that the regions with a large amount are China, US, Brazil,
+                Russia, Australia and India, and so on.
+            </div>
+        </div>
+        <div class="chart-item">
+            <div id="scatter_plot"></div>
+            <div class="description">
+                The chart above is used to show the top 10 countries in GHG-emissions from 1990 - 2018. From this chart
+                above, we can know the top 10 countries with highest GHG emission from 1990 to 2018 are: Brazil, Canada,
+                China, Germany, India, Indonesia, Iran, Japan, Rissia and United States, respectively. Especially, the
+                growth rate of the top 3 countries are obviously increasing since the 1997.
+            </div>
+        </div>
+        <div class="chart-item">
+            <div id="kgco2_chart"></div>
+            <div class="description">
+                This chart above is mainly used to show the change in KgCO2 /GDP(per Million US Dollars) from 1990 - 2018.
+                From this chart, it could know that in 1990 (orange dot), Indonesia, China and Russia had the highest value of GHG per GDP,
+                expecially for Indonesia, they emitted 11.86 KGCO2 GHG when they produced 1 Million Dollars of GDP. But until 2018,
+                These countries have improved greatly, and the top 10 countries in emissions are all working hard to reduce the data, 
+                which means that they are moving in a good direction.
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+
+</html>

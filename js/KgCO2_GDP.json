@@ -1,0 +1,71 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "title": {
+    "text": "Change in KgCO2 / GDP(per Million US Dollar) from 1990 - 2018",
+    "offset": 20
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/jianingZhou28321367/ass2/justin/Data/TOP5%20ghg.csv"
+  },
+  "transform": [
+    {"field": "Country"},
+    {"filter": {"field": "Year", "oneOf": ["1990", "2018"]}}
+  ],
+  "encoding": {
+    "x": {
+      "field": "KGCO2 / GDP(per Million US Dollar)",
+      "type": "quantitative",
+      "axis": {"title": "KgCO2 / GDP(per Million US Dollar)"}
+    },
+    "y": {
+      "field": "Country",
+      "type": "nominal",
+      "axis": {
+        "title": null,
+        "offset": 5,
+        "ticks": false,
+        "minExtent": 70,
+        "domain": false
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": "line",
+      "encoding": {
+        "detail": {"field": "Country", "type": "nominal"},
+        "color": {"value": "#212121"},
+        "size": {"value": 1}
+      }
+    },
+    {
+      "mark": {"type": "point", "filled": true},
+      "encoding": {
+        "color": {
+          "field": "Year",
+          "type": "ordinal",
+          "scale": {"domain": [1990, 2018], "range": ["#FAA757", "#60BCD3"]},
+          "legend": {
+            "title": null,
+            "orient": "bottom",
+            "direction": "horizontal"
+          }
+        },
+        "size": {"value": 100},
+        "opacity": {"value": 1},
+        "tooltip": [
+          {
+            "field": "KGCO2 / GDP(per Million US Dollar)",
+            "type": "quantitative",
+            "title": "per Million US Dollar will create KgCO2)"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "style": {"cell": {"stroke": "transparent"}},
+    "axis": {"ticks": false, "domainColor": null}
+  }
+}
